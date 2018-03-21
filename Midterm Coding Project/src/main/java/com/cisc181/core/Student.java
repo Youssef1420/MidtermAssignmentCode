@@ -3,14 +3,15 @@ package com.cisc181.core;
 import java.util.Date;
 import java.util.UUID;
 
+
 import com.cisc181.eNums.eMajor;
 
 public class Student extends Person {
 
-	private String Major;
+	private eMajor Major;
 	private UUID StudentID;
 	
-	public String getMajor ( )
+	public eMajor getMajor ( )
     {
         return this.Major;
     }
