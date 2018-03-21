@@ -102,56 +102,56 @@ public class Student_Test {
 		ArrayList<Integer> gradeSet2 = new ArrayList<Integer>(Arrays.asList(87, 79, 50));
 		ArrayList<Integer> gradeSet3 = new ArrayList<Integer>(Arrays.asList(99, 88, 87));
 		for (int k = 0; k < students.size(); k++) {
-			chem1.add(new Enrollment(sections.get(0).getSectionID(), students.get(k).getStudentID()));
-			chem1.get(k).setGrade(gradeSet1.get(k));
-			chem2.add(new Enrollment(sections.get(1).getSectionID(), students.get(k).getStudentID()));
-			chem2.get(k).setGrade(gradeSet2.get(k));
-			phyysics1.add(new Enrollment(sections.get(2).getSectionID(), students.get(k).getStudentID()));
-			phyysics1.get(k).setGrade(gradeSet3.get(k));
-			physics2.add(new Enrollment(sections.get(3).getSectionID(), students.get(k).getStudentID()));
-			physics2.get(k).setGrade(gradeSet1.get(k));
-			nurse1.add(new Enrollment(sections.get(4).getSectionID(), students.get(k).getStudentID()));
-			nurse1.get(k).setGrade(gradeSet2.get(k));
-			nurse2.add(new Enrollment(sections.get(5).getSectionID(), students.get(k).getStudentID()));
-			nurse2.get(k).setGrade(gradeSet3.get(k));
+			chem111.add(new Enrollment(sections.get(0).getSectionID(), students.get(k).getStudentID()));
+			chem111.get(k).setGrade(gradeSet1.get(k));
+			chem112.add(new Enrollment(sections.get(1).getSectionID(), students.get(k).getStudentID()));
+			chem112.get(k).setGrade(gradeSet2.get(k));
+			phyysics207.add(new Enrollment(sections.get(2).getSectionID(), students.get(k).getStudentID()));
+			phyysics207.get(k).setGrade(gradeSet3.get(k));
+			physics208.add(new Enrollment(sections.get(3).getSectionID(), students.get(k).getStudentID()));
+			physics208.get(k).setGrade(gradeSet1.get(k));
+			nurse111.add(new Enrollment(sections.get(4).getSectionID(), students.get(k).getStudentID()));
+			nurse111.get(k).setGrade(gradeSet2.get(k));
+			nurse112.add(new Enrollment(sections.get(5).getSectionID(), students.get(k).getStudentID()));
+			nurse112.get(k).setGrade(gradeSet3.get(k));
 		}
 	}
-	public double calcStudentGPA(ArrayList<Enrollment> chem1, ArrayList<Enrollment> chem2, ArrayList<Enrollment> phyysics1,
-			ArrayList<Enrollment> physics2, ArrayList<Enrollment> nurse1, ArrayList<Enrollment> nurse2, int Student) {
+	public double calcStudentGPA(ArrayList<Enrollment> chem111, ArrayList<Enrollment> chem112, ArrayList<Enrollment> phyysics207,
+			ArrayList<Enrollment> physics208, ArrayList<Enrollment> nurse111, ArrayList<Enrollment> nurse222, int Student) {
 		
 		final int COURSENUM = 6;
 		
 		double GPAAVG = 0;
-		if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		if ((chem111.get(Student).getGrade() + chem112.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics207.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 95) {
 			GPAAVG = 4.0;
-		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		} else if ((chem111.get(Student).getGrade() + chem112.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics207.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 90) {
 			GPAAVG = 3.75;
-		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		} else if ((chem111.get(Student).getGrade() + chem112.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics208.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 85) {
 			GPAAVG = 3.50;
-		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		} else if ((chem1.get(Student).getGrade() + chem112.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics208.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 80) {
 			GPAAVG = 3.00;
-		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics208.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 75) {
 			GPAAVG = 2.50;
-		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		} else if ((chem111.get(Student).getGrade() + chem112.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics208.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 70) {
 			GPAAVG = 2.00;
-		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		} else if ((chem111.get(Student).getGrade() + chem112.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics208.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 65) {
 			GPAAVG = 1.50;
-		} else if ((chem1.get(Student).getGrade() + chem2.get(Student).getGrade() + physics2.get(Student).getGrade()
-				+ phyysics1.get(Student).getGrade() + nurse1.get(Student).getGrade() + nurse2.get(Student).getGrade())
+		} else if ((chem111.get(Student).getGrade() + chem112.get(Student).getGrade() + physics207.get(Student).getGrade()
+				+ phyysics208.get(Student).getGrade() + nurse111.get(Student).getGrade() + nurse222.get(Student).getGrade())
 				/ COURSENUM >= 60) {
 			GPAAVG = 1.00;
 		} else {
@@ -161,16 +161,16 @@ public class Student_Test {
 	}
 	@Test
 	public void StudentGPATest() {
-		assertEquals(4.0, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 0), .001);
-		assertEquals(2.0, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 1), .001);
-		assertEquals(0.0, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 2), .001);
-		assertEquals(3.75, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 3), .001);
-		assertEquals(2.0, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 4), .001);
-		assertEquals(3.5, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 5), .001);
-		assertEquals(2.5, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 6), .001);
-		assertEquals(1.5, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 7), .001);
-		assertEquals(3.0, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 8), .001);
-		assertEquals(1.0, calcStudentGPA(chem1, chem2, physics2, phyysics1, nurse1, nurse2, 9), .001);
+		assertEquals(4.0, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 0), .001);
+		assertEquals(2.0, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 1), .001);
+		assertEquals(0.0, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 2), .001);
+		assertEquals(3.75, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 3), .001);
+		assertEquals(2.0, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 4), .001);
+		assertEquals(3.5, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 5), .001);
+		assertEquals(2.5, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 6), .001);
+		assertEquals(1.5, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 7), .001);
+		assertEquals(3.0, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 8), .001);
+		assertEquals(1.0, calcStudentGPA(chem111, chem112, physics207, phyysics208, nurse111, nurse222, 9), .001);
 	}
 	public static double CourseGr(ArrayList<Enrollment> courses) {
 		double avg = 0;
@@ -183,12 +183,12 @@ public class Student_Test {
 	}
 	@Test
 	public void testCourseGr() {
-		assertEquals(75.4, CourseGr(chem1), .01);
-		assertEquals(76.7, CourseGr(chem2), 01);
-		assertEquals(75.2, CourseGr(physics2), .01);
-		assertEquals(75.4, CourseGr(phyysics1), .01);
-		assertEquals(76.7, CourseGr(nurse1), 01);
-		assertEquals(75.2, CourseGr(nurse2), .01);
+		assertEquals(75.4, CourseGr(chem111), .01);
+		assertEquals(76.7, CourseGr(chem112), 01);
+		assertEquals(75.2, CourseGr(physics207), .01);
+		assertEquals(75.4, CourseGr(phyysics208), .01);
+		assertEquals(76.7, CourseGr(nurse111), 01);
+		assertEquals(75.2, CourseGr(nurse222), .01);
 	}
 	public static void ChangeOfMajor(eMajor maj, Student stu) {
 		stu.setMajor(maj);
